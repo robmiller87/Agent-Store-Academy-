@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     siteName: 'Agent Store Academy',
     images: [
       {
-        url: 'https://agentstore.academy/og-image.svg',
+        url: 'https://agentstore.academy/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Agent Store Academy - The Shopify Era Tech Stack is Dead',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Shopify Era Tech Stack is Dead',
     description: 'Open source tools + AI Agents. Own everything. Pay almost nothing.',
-    images: ['https://agentstore.academy/og-image.svg'],
+    images: ['https://agentstore.academy/og-image.png'],
   },
 }
 
