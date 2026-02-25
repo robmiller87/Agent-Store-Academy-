@@ -20,11 +20,11 @@ export default function LandingPage() {
       />
       <main className="relative z-10">
         <HeroSection />
+        <QuoteSection />
         <DeadStackSection />
         <NewStackSection />
         <SocialProofSection />
         <QualifierSection />
-        <QuoteSection />
         <CTASection />
       </main>
       <Footer />

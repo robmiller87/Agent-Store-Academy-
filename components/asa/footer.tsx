@@ -12,6 +12,15 @@ export function Footer() {
           >
             Robert Miller
           </a>
+          {" "}+{" "}
+          <a
+            href="https://agent-george.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            George
+          </a>
         </p>
         <p className="text-xs text-muted-foreground/60">
           &copy; {new Date().getFullYear()} Agent Store Academy
