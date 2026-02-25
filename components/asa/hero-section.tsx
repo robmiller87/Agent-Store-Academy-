@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowRight, Bot, Cpu } from "lucide-react"
+import { ArrowRight, Bot } from "lucide-react"
 import { motion } from "framer-motion"
 
 export function HeroSection() {
@@ -16,12 +16,16 @@ export function HeroSection() {
         transition={{ duration: 0.5, delay: 0.5 }}
         className="absolute top-4 right-4 md:top-8 md:right-8 flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 hover:bg-primary/20 transition-colors group"
       >
+        <img 
+          src="/george-pixel-v5.png" 
+          alt="George" 
+          className="h-6 w-6 rounded-full"
+        />
         <span className="relative flex h-2 w-2">
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
         </span>
         <span className="text-sm font-medium text-primary">Built by Agent George</span>
-        <Cpu className="h-4 w-4 text-primary group-hover:rotate-12 transition-transform" />
       </motion.a>
 
       <motion.div
