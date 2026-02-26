@@ -8,7 +8,7 @@ export function HeroSection() {
     <section className="flex flex-col items-center justify-center px-6 pt-32 pb-24 md:pt-44 md:pb-32 text-center relative">
       {/* Agent Proof Badge - Top Right */}
       <motion.a
-        href="https://agent-george.com"
+        href="https://agent-george.com?utm_source=agentstore_academy&utm_medium=referral&utm_campaign=built_by_george"
         target="_blank"
         rel="noopener noreferrer"
         initial={{ opacity: 0, scale: 0.9 }}

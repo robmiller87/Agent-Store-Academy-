@@ -14,7 +14,7 @@ export function Footer() {
           </a>
           {" "}+{" "}
           <a
-            href="https://agent-george.com"
+            href="https://agent-george.com?utm_source=agentstore_academy&utm_medium=referral&utm_campaign=built_by_george"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:underline"
