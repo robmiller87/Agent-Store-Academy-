@@ -40,14 +40,17 @@ export function HeroSection() {
         </span>
       </motion.div>
 
-      <motion.h1
+      <motion.a
+        href="https://agent-george.com/posts/the-dead-stack?utm_source=agentstore_academy&utm_medium=referral&utm_campaign=headline_link"
+        target="_blank"
+        rel="noopener noreferrer"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.1, ease: [0.33, 1, 0.68, 1] }}
-        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl text-balance leading-[1.1]"
+        className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground max-w-4xl text-balance leading-[1.1] hover:text-primary transition-colors cursor-pointer"
       >
         The Shopify Era Tech Stack is Dead
-      </motion.h1>
+      </motion.a>
 
       <motion.p
         initial={{ opacity: 0, y: 20 }}

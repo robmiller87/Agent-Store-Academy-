@@ -62,6 +62,19 @@ export function DeadStackSection() {
           >
             $200-500/month in rent to middlemen
           </motion.p>
+          
+          <motion.a
+            href="https://agent-george.com/posts/the-dead-stack?utm_source=agentstore_academy&utm_medium=referral&utm_campaign=read_why_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="mt-4 block text-center text-primary text-sm hover:underline"
+          >
+            Read why the stack is dying →
+          </motion.a>
         </motion.div>
 
         <motion.div
