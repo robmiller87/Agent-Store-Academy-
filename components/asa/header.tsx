@@ -2,10 +2,10 @@ import Link from "next/link"
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border/50">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
         <Link href="/" className="font-semibold text-lg tracking-tight">
-          <span className="text-primary">Agent</span>Store Academy
+          Agent Store Academy
         </Link>
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
