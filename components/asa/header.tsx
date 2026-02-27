@@ -11,9 +11,6 @@ export function Header() {
           <Link href="/blog" className="text-muted-foreground hover:text-primary transition-colors">
             Blog
           </Link>
-          <Link href="/free" className="text-muted-foreground hover:text-primary transition-colors">
-            Free Resources
-          </Link>
           <Link
             href="https://tally.so/r/wL1E1A"
             target="_blank"

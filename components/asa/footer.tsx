@@ -5,7 +5,6 @@ export function Footer() {
         <div className="flex justify-center gap-6 text-sm">
           <a href="/" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
           <a href="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog</a>
-          <a href="/free" className="text-muted-foreground hover:text-primary transition-colors">Free Resources</a>
         </div>
         <p className="text-sm text-muted-foreground">
           Built by{" "}
