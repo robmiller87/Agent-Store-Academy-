@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
 import { notFound } from 'next/navigation'
 import { getPostBySlug, getAllPosts } from '@/lib/blog-data'
 
@@ -30,35 +31,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <main className="min-h-screen bg-black text-white">
-      {/* Header */}
-      <header className="border-b border-gray-800">
-        <div className="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
-          <Link href="/" className="text-xl font-bold">
-            <span className="text-white">Agent Store</span>
-            <span className="text-yellow-400"> Academy</span>
-          </Link>
-          <nav className="flex gap-6 text-sm">
-            <Link href="/" className="text-gray-400 hover:text-white">Home</Link>
-            <Link href="/blog" className="text-gray-400 hover:text-white">Blog</Link>
-          </nav>
-        </div>
-      </header>
-
       {/* Article */}
       <article className="max-w-3xl mx-auto px-6 py-12">
         {/* Meta */}
         <div className="mb-8">
           <div className="flex gap-2 mb-4">
             {post.tags.map(tag => (
-              <span key={tag} className="text-xs text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded">
+              <span key={tag} className="text-xs text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded">
                 {tag}
               </span>
             ))}
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">{post.title}</h1>
           <div className="flex gap-4 text-gray-400">
-            <span>{post.author}</span>
-            <span>•</span>
             <span>{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
             <span>•</span>
             <span>{post.readTime}</span>
@@ -71,11 +56,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-12 prose-h2:mb-4
           prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3
           prose-p:text-gray-300 prose-p:leading-relaxed
-          prose-a:text-yellow-400 prose-a:no-underline hover:prose-a:underline
+          prose-a:text-emerald-400 prose-a:no-underline hover:prose-a:underline
           prose-strong:text-white
-          prose-code:text-yellow-400 prose-code:bg-gray-900 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
+          prose-code:text-emerald-400 prose-code:bg-gray-900 prose-code:px-1 prose-code:py-0.5 prose-code:rounded
           prose-pre:bg-gray-900 prose-pre:border prose-pre:border-gray-800
-          prose-blockquote:border-yellow-400 prose-blockquote:bg-gray-900/50 prose-blockquote:py-1
+          prose-blockquote:border-emerald-400 prose-blockquote:bg-gray-900/50 prose-blockquote:py-1
           prose-ul:text-gray-300 prose-li:text-gray-300
         ">
           {post.content.split('\n').map((line, i) => {
@@ -94,7 +79,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               return null // Skip code fence markers
             }
             if (line.startsWith('→')) {
-              return <p key={i} className="text-gray-300 pl-4 border-l-2 border-yellow-400/50 my-1">{line}</p>
+              return <p key={i} className="text-gray-300 pl-4 border-l-2 border-emerald-400/50 my-1">{line}</p>
             }
             // Empty lines
             if (line.trim() === '') {
@@ -112,11 +97,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         </div>
 
         {/* CTA */}
-        <div className="mt-16 p-8 bg-gradient-to-r from-yellow-400/10 to-orange-400/10 border border-yellow-400/20 rounded-lg text-center">
-          <h3 className="text-2xl font-bold mb-2">Want to build agents like this?</h3>
-          <p className="text-gray-400 mb-6">Join Agent Store Academy — learn to deploy AI agents for real business use cases.</p>
-          <Link href="/" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition">
-            Join the Academy →
+        <div className="mt-16 p-8 border border-gray-800 rounded-xl text-center">
+          <h3 className="text-2xl font-bold mb-3">Ready to build your AI-powered store?</h3>
+          <p className="text-gray-400 mb-6">Join 100 founding members learning to build e-commerce without the SaaS tax.</p>
+          <Link 
+            href="/#apply" 
+            className="inline-flex items-center gap-2 rounded-lg bg-emerald-500 px-6 py-3 text-base font-semibold text-black transition-opacity hover:opacity-90"
+          >
+            Apply Now
+            <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
@@ -127,6 +116,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           </Link>
         </div>
       </article>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-800 mt-8">
+        <div className="max-w-4xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-gray-500 text-sm">© 2026 Agent Store Academy</p>
+          <div className="flex gap-6 text-sm text-gray-500">
+            <Link href="/" className="hover:text-white transition">Home</Link>
+            <Link href="/blog" className="hover:text-white transition">Blog</Link>
+          </div>
+        </div>
+      </footer>
     </main>
   )
 }
